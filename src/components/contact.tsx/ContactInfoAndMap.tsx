@@ -30,7 +30,7 @@ const ContactInfoAndMap = () => {
           </div>
           <div className="flex items-center">
             <Phone size={20} className="text-[#d4af37] mr-4" />
-            <span>+62 21 1234 5678</span>
+            <span>+62.... kontol</span>
           </div>
           <div className="flex items-center">
             <Mail size={20} className="text-[#d4af37] mr-4" />
