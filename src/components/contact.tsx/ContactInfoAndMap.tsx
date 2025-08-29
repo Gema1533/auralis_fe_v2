@@ -1,16 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { fadeIn } from "@/pages";
 
 const ContactInfoAndMap = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+
   return (
     <motion.div
       initial="hidden"
@@ -21,7 +15,7 @@ const ContactInfoAndMap = () => {
     >
       <div>
         <h2 className="text-3xl font-serif text-white mb-6">
-          Kunjungi Butik Kami
+          Kunjungi Toko Kami
         </h2>
         <div className="space-y-4 text-gray-300">
           <div className="flex items-start">
@@ -40,7 +34,7 @@ const ContactInfoAndMap = () => {
           </div>
           <div className="flex items-center">
             <Mail size={20} className="text-[#d4af37] mr-4" />
-            <span>concierge@auralisparfum.com</span>
+            <span>service@auralisparfum.com</span>
           </div>
         </div>
       </div>

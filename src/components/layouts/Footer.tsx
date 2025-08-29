@@ -5,16 +5,17 @@ const Footer = () => {
     <footer className="bg-black pt-20 pb-8 border-t border-white/10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
-          <div className="md:col-span-4 text-center md:text-left">
-            <h3 className="text-2xl font-serif font-bold tracking-wider text-[#d4af37] mb-4">
+          <div className="md:col-span-4 text-center md:text-left flex justify-center items-center">
+            {/* <h3 className="text-2xl font-serif font-bold tracking-wider text-[#d4af37] mb-4">
               AURALIS
-            </h3>
-            <p className="text-gray-400">
+            </h3> */}
+            <img src="./img/logo/1.png" className="w-80" alt="" />
+            {/* <p className="text-gray-400">
               Seni keharuman murni untuk jiwa yang berkelas.
-            </p>
+            </p> */}
           </div>
-          <div className="md:col-span-2 text-center md:text-left">
-            <h3 className="text-lg font-semibold text-white mb-4">Navigasi</h3>
+          <div className="md:col-span-2 hidden md:block  text-center md:text-left">
+            <h3 className="text-lg  font-semibold text-white mb-4">Navigasi</h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -66,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-500">
+          <p className="text-xs md:text-lg text-gray-500">
             &copy; 2024 AURALIS PARFUM. Seluruh Hak Cipta.
           </p>
         </div>

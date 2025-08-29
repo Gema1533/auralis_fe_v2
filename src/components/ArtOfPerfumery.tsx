@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const ArtOfPerfumery = () => {
     return (
-        <section className="py-24">
+        <section className="py-18 md:py-24">
             <div className="container mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-12">
                 <motion.div 
                     initial={{ opacity: 0, x: 50 }}
@@ -13,7 +13,7 @@ const ArtOfPerfumery = () => {
                     viewport={{ once: true }}
                     className="md:w-1/2"
                 >
-                    <img src="https://images.unsplash.com/photo-1598432423308-5f22a3875a03?q=80&w=2574&auto=format&fit=crop" alt="Proses pembuatan parfum" className="rounded-lg w-full"/>
+                    <img src="./img/product-list/create1.jpg" alt="Proses pembuatan parfum" className="rounded-lg w-full"/>
                 </motion.div>
                 <motion.div 
                     initial={{ opacity: 0, x: -50 }}

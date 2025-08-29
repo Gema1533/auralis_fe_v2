@@ -1,37 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeIn } from "@/pages";
 
 const PhilosophySection = () => {
   const pillars = [
     {
       title: "Bahan Terbaik",
+      img: "./img/banner/a1.jpg",
       desc: "Dipilih dari sumber paling murni di seluruh dunia.",
     },
     {
       title: "Peracik Ahli",
+      img: "./img/banner/a2.jpg",
       desc: "Diciptakan oleh para 'hidung' legendaris dalam industri.",
     },
     {
       title: "Desain Abadi",
+      img: "./img/banner/a3.jpg",
       desc: "Setiap botol adalah karya seni yang elegan dan tak lekang oleh waktu.",
     },
   ];
 
-  const fadeIn = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: i * 0.1,
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    }),
-  };
   return (
-    <section className="py-24 bg-[#111]">
+    <section className="py-18 md:py-24 bg-[#111]">
       <div className="container mx-auto px-6 text-center">
         <motion.div
           initial="hidden"
@@ -57,12 +48,20 @@ const PhilosophySection = () => {
                 delay: index * 0.2,
                 ease: "easeOut",
               }}
+              className="relative"
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-serif text-white mb-3">
-                {pillar.title}
-              </h3>
-              <p className="text-gray-400">{pillar.desc}</p>
+              <img
+                src={pillar.img}
+                alt=""
+                className="absolute w-full h-full object-cover blur-[px] z-0"
+              />
+              <div className="relative bg-black/50 h-full z-20 flex flex-col justify-center p-2">
+                <h3 className="text-2xl font-serif  text-white mb-3">
+                  {pillar.title}
+                </h3>
+                <p className="text-white">{pillar.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>

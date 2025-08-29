@@ -1,24 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeIn } from "@/pages";
 
 const CallToAction = () => {
-    const fadeIn = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-    };
   return (
-    <section className="py-24 bg-[#111]">
-      <div className="container mx-auto px-6 text-center">
+    <section className="py-18 md:py-24 bg-[#111]">
+      <div className="container mx-auto  text-center relative overflow-hidden">
+        <img
+          src="./img/banner/a5.jpg"
+          className="absolute object-cover h-full w-full "
+          alt=""
+        />
+
         <motion.div
           initial="hidden"
+          className="relative p-5 bg-black/50 w-full"
           whileInView="visible"
-          variants={{fadeIn}}
+          variants={{ fadeIn }}
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">
             Jadilah Bagian dari Kisah Kami
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-white max-w-2xl mx-auto mb-8">
             Kisah Anda menunggu untuk ditulis. Temukan aroma yang akan
             menemaninya.
           </p>

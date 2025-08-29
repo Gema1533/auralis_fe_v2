@@ -1,22 +1,20 @@
 import React from "react";
 import { motion } from 'framer-motion';
+import { fadeIn } from "@/pages";
 
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+
 
 const TestimonialSection = () => {
   return (
     <section
-      className="py-24 bg-cover bg-center"
+      className=" bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1587088155132-2975394831e3?q=80&w=2574&auto=format&fit=crop')",
+          "url('./img/bg/bg2.jpg')",
       }}
     >
-      <div className="container mx-auto px-6 text-center bg-black/60 backdrop-blur-sm py-20 rounded-lg">
+      <div className="container mx-auto px-6 text-center bg-black/60  py-20 rounded-lg">
         <motion.div
           initial="hidden"
           whileInView="visible"

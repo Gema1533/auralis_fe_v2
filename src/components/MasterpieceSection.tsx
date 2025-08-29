@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const MasterpieceSection = () => {
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-18 md:py-24 overflow-hidden">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50, scale: 0.9 }}
@@ -14,7 +14,7 @@ const MasterpieceSection = () => {
           className="md:w-1/2 flex justify-center"
         >
           <img
-            src="https://placehold.co/500x700/0c0c0c/d4af37?text=AURA+NOIR"
+            src="./img/product-list/po1.jpg"
             alt="Botol AURA NOIR"
             className="max-w-sm w-full drop-shadow-2xl"
           />

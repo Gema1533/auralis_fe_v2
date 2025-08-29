@@ -8,50 +8,53 @@ const ProductGrid = () => {
       name: "Aura Noir",
       category: "Woody & Spiced",
       price: "Rp 1.250.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Aura+Noir",
+      image: "./img/product-list/1.png",
     },
     {
       name: "Golden Elixir",
       category: "Oud & Oriental",
       price: "Rp 1.480.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Golden+Elixir",
+      image: "./img/product-list/oud1.jpg",
     },
     {
       name: "Celestial Bloom",
       category: "Floral & Fruity",
       price: "Rp 1.320.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Celestial+Bloom",
+      image: "./img/product-list/wd1.jpg",
     },
     {
       name: "Crimson Dusk",
       category: "Oud & Oriental",
       price: "Rp 1.550.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Crimson+Dusk",
+      image: "./img/product-list/2.png",
+
     },
     {
-      name: "Verdant Whisper",
-      category: "Floral & Fruity",
-      price: "Rp 1.280.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Verdant+Whisper",
-    },
-    {
-      name: "Sable Mystique",
+      name: "Aura Noir",
       category: "Woody & Spiced",
-      price: "Rp 1.620.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Sable+Mystique",
+      price: "Rp 1.250.000",
+      image: "./img/product-list/1.png",
     },
     {
-      name: "Ivory Musk",
-      category: "Floral & Fruity",
-      price: "Rp 1.350.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Ivory+Musk",
-    },
-    {
-      name: "Amber Solstice",
+      name: "Golden Elixir",
       category: "Oud & Oriental",
-      price: "Rp 1.750.000",
-      image: "https://placehold.co/500x700/0c0c0c/d4af37?text=Amber+Solstice",
+      price: "Rp 1.480.000",
+      image: "./img/product-list/oud1.jpg",
     },
+    {
+      name: "Celestial Bloom",
+      category: "Floral & Fruity",
+      price: "Rp 1.320.000",
+      image: "./img/product-list/wd1.jpg",
+    },
+    {
+      name: "Crimson Dusk",
+      category: "Oud & Oriental",
+      price: "Rp 1.550.000",
+      image: "./img/product-list/2.png",
+
+    },
+   
   ];
 
   const staggerContainer = {
@@ -72,7 +75,7 @@ const ProductGrid = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12"
         >
           {products.map((product) => (
             <ProductCard key={product.name} product={product} />

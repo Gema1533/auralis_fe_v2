@@ -1,16 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Droplets, Feather, Wind } from "lucide-react";
+import { fadeIn } from "@/pages";
 
 const OurPhilosophy = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
 
   const pillars = [
     {
@@ -31,7 +24,7 @@ const OurPhilosophy = () => {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-18 md:py-24">
       <div className="container mx-auto px-6 text-center">
         <motion.div
           initial="hidden"
@@ -43,7 +36,7 @@ const OurPhilosophy = () => {
             Filosofi Inti AURALIS
           </h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="flex flex-wrap justify-center gap-col-12">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
@@ -55,7 +48,7 @@ const OurPhilosophy = () => {
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
-              className="flex flex-col items-center"
+              className="w-6/12 md:w-4/12 flex flex-col items-center"
             >
               <div className="text-[#d4af37] mb-4">{pillar.icon}</div>
               <h3 className="text-2xl font-serif text-white mb-3">

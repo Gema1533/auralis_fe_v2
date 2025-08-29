@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const OurStory = () => {
   return (
-    <section className="py-24 bg-[#111]">
+    <section className=" bg-[#111]">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -12,7 +12,7 @@ const OurStory = () => {
           viewport={{ once: true }}
         >
           <img
-            src="https://images.unsplash.com/photo-1557175344-7e615f204e6d?q=80&w=2574&auto=format=fit=crop"
+            src="./img/banner/a4.jpg"
             alt="Bahan-bahan parfum AURALIS"
             className="rounded-lg w-full"
           />
