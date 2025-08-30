@@ -39,7 +39,7 @@ const Header = () => {
           AURALIS
         </a>
         <div className="hidden md:flex space-x-10 items-center bg-black/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
-          <a href="/" className={`${path == "" && "text-white "} hover:text-white font-bold transition text-sm`}>
+          <a href="/" className={`${path === "/" && "text-white "} hover:text-white font-bold transition text-sm`}>
             Beranda
           </a>
           <a href="/product" className={`${path.toLowerCase().includes("product") && "text-white"} hover:text-white font-bold transition text-sm`}>
