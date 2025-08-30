@@ -5,6 +5,8 @@ import MasterpieceSection from "../components/MasterpieceSection";
 import ScentDiscovery from "../components/ScentDiscovery";
 import ArtOfPerfumery from "../components/ArtOfPerfumery";
 import TestimonialSection from "../components/TestimonialSection";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
 const index = () => {
   return (
@@ -18,5 +20,15 @@ const index = () => {
     </>
   );
 };
+
+
+// export async function getServerSideProps(context: { locale?: string }) {
+//   const locale = context.locale || "id"; 
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["common"])),
+//     },
+//   };
+// }
 
 export default index;
