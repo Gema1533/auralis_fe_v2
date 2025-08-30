@@ -6,7 +6,6 @@ import ScentDiscovery from "../components/ScentDiscovery";
 import ArtOfPerfumery from "../components/ArtOfPerfumery";
 import TestimonialSection from "../components/TestimonialSection";
 // import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "react-i18next";
 
 const index = () => {
   return (

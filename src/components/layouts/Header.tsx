@@ -1,3 +1,4 @@
+import { useSidebarAction, useSidebarSelector } from "@/hooks/useSidebar";
 import { Menu, Search, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -6,9 +7,10 @@ import React, {useState, useEffect} from "react";
 const Header = () => {
   const router = useRouter();
   const path = router.pathname;
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Cek posisi scroll
+  const [ isScrolled, setIsScrolled] = useState(false);
+  const { action } = useSidebarAction();
+  const { open } = useSidebarSelector()
+ 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -58,7 +60,7 @@ const Header = () => {
             <ShoppingBag size={20} />
           </button>
           <button className="md:hidden text-white cursor-pointer" >
-            <Menu size={24} />
+            <Menu size={24}  onClick={() => action(!open)}/>
           </button>
         </div>
       </nav>

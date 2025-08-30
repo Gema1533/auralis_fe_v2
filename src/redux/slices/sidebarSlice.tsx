@@ -12,12 +12,12 @@ const sidebarSlice = createSlice({
   name: "sidebarSlice",
   initialState,
   reducers: {
-    todoAction(state: IsideBarSlice, action: PayloadAction<IsideBarSlice>) {
+    modalAction(state: IsideBarSlice, action: PayloadAction<IsideBarSlice>) {
       state.open = action.payload.open;
     },
   },
 });
 
 
-export const { todoAction } = sidebarSlice.actions
+export const { modalAction } = sidebarSlice.actions
 export default sidebarSlice.reducer

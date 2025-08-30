@@ -1,23 +1,25 @@
+import { useSidebarAction, useSidebarSelector } from "@/hooks/useSidebar";
 import { usePath } from "@/hooks/usePath";
 import { X, Home, Package, Info, Phone } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const path = usePath();
-
+  const { action } = useSidebarAction();
+  const { open } = useSidebarSelector();
+  
   return (
     <div
       className={`fixed top-0 left-0 h-full w-64 bg-black/90 backdrop-blur-md border-r border-white/10 transform ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
+        open ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out z-50`}
     >
       {/* Close Button */}
       <div className="flex justify-end p-4">
         <button
           className="text-white hover:text-[#d4af37]"
-          onClick={() => setIsOpen(false)}
+          onClick={() => action(false)}
         >
           <X size={24} />
         </button>
@@ -33,7 +35,6 @@ const Sidebar = () => {
       <div className="flex flex-col space-y-6 px-6 mt-6 font-bold">
         <Link
           href="/"
-          onClick={() => setIsOpen(false)}
           className={`flex items-center gap-3 px-3 py-2 rounded-lg transition ${
             path === "/"
               ? "bg-[#d4af37] text-black"
@@ -44,7 +45,6 @@ const Sidebar = () => {
         </Link>
         <Link
           href="/product"
-          onClick={() => setIsOpen(false)}
           className={`flex items-center gap-3 px-3 py-2 rounded-lg transition ${
             path.startsWith("/product")
               ? "bg-[#d4af37] text-black"
@@ -55,7 +55,6 @@ const Sidebar = () => {
         </Link>
         <Link
           href="/aboutUs"
-          onClick={() => setIsOpen(false)}
           className={`flex items-center gap-3 px-3 py-2 rounded-lg transition ${
             path.startsWith("/aboutUs")
               ? "bg-[#d4af37] text-black"
@@ -66,7 +65,6 @@ const Sidebar = () => {
         </Link>
         <Link
           href="/contact"
-          onClick={() => setIsOpen(false)}
           className={`flex items-center gap-3 px-3 py-2 rounded-lg transition ${
             path.startsWith("/contact")
               ? "bg-[#d4af37] text-black"
