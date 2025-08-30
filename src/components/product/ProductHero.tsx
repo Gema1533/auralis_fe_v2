@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/pages";
+import { fadeIn } from "@/constans/public";
 
 const ProductHero = () => (
   <section className="pt-32 pb-16 bg-[#111] text-center">

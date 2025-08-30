@@ -1,7 +1,7 @@
 
 import React from 'react'   
 import { motion } from 'framer-motion';
-import { fadeIn } from '@/pages';
+import { fadeIn } from "@/constans/public";
 
 
 const ScentDiscovery = () => {

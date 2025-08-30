@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { fadeIn } from "@/pages";
+import { fadeIn } from "@/constans/public";
 
 const ContactInfoAndMap = () => {
 

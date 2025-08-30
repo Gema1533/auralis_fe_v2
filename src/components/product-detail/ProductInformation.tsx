@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 
 const ProductInformation = () => {
-  const dataSize = ["20ML","30ML","50ML","70ML","100ML"]
+  // const dataSize = ["20ML","30ML","50ML","70ML","100ML"]
   return (
     <section className="container mx-auto px-6 ">
       <div className="grid grid-cols-2">
