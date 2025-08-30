@@ -4,19 +4,17 @@ import storage from "redux-persist/lib/storage";
 import sidebarSlice from "./slices/sidebarSlice";
 import loginSlice from "./slices/loginSlice";
 
-const persistConfig = {
-  key: "root",
-  storage,
-  blacklist: ["sidebarSlice"],
-};
-
 const rootReducer = {
   sidebar: sidebarSlice,
   login: loginSlice,
 };
 
 const persistedReducer = persistReducer(
-  persistConfig,
+  {
+    key: "root",
+    storage,
+    blacklist: ["sidebar"],
+  },
   combineReducers(rootReducer)
 );
 
